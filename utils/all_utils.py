@@ -68,6 +68,7 @@ def save_plot(df, file_name, model):
         plt.xlim(xx1.min(), xx1.max())
         plt.ylim(xx2.min(), xx2.max())
         plt.plot()
+        
     X, y = prepare_data(df)
     _create_base_plot(df)
     _plot_decision_regions(X, y, model)

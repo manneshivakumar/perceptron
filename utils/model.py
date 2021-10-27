@@ -21,6 +21,7 @@ class Perceptron:
     X_with_bias = np.c_[self.X, -np.ones((len(self.X), 1))] # CONCATINATION
     logging.info(f"X with bias: \n{X_with_bias}")
 
+    #for epoch in range(self.epochs): # below is status bar implementation using tqdm
     for epoch in tqdm(range(self.epochs), total=self.epochs, desc="training the model"):
       logging.info("--"*10)
       logging.info(f"for epoch: {epoch}")
