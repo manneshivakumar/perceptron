@@ -7,7 +7,6 @@ import logging
 
 plt.style.use("fivethirtyeight")
 
-
 def prepare_data(df):
     """it is used to separate the dependent variables and independent features
 
@@ -22,7 +21,6 @@ def prepare_data(df):
     y = df["y"]
     return x, y
 
-
 def save_model(model, filename):
     """This saves the trained model to
 
@@ -36,8 +34,6 @@ def save_model(model, filename):
     filepath = os.path.join(model_dir, filename)  # model/filename
     joblib.dump(model, filepath)
     logging.info(f"saved the trained model {filepath}")
-
-
 
 def save_plot(df, file_name, model):
     """

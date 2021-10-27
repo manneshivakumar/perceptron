@@ -9,7 +9,6 @@ log_dir = "logs"
 os.makedirs(log_dir, exist_ok=True)
 logging.basicConfig(filename= os.path.join(log_dir,"running_logs.log"),level=logging.INFO, format=logging_str, filemode="a")
 
-
 def main(data, modelName, plotName, eta, epochs):
     df = pd.DataFrame(data)
     logging.info(f"This is actual dataframe{df}")
@@ -19,7 +18,6 @@ def main(data, modelName, plotName, eta, epochs):
     _ = model.total_loss()
     save_model(model, filename=modelName)
     save_plot(df, plotName, model)
-
 
 if __name__ == '__main__':
     OR = {
